@@ -20,9 +20,7 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           DrawerItemsListView(),
-          SliverFillRemaining(
-            hasScrollBody: false,
-            child: HeederOfDrawer()),
+          SliverFillRemaining(hasScrollBody: false, child: HeederOfDrawer()),
         ],
       ),
     );

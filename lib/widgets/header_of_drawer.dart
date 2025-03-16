@@ -11,7 +11,7 @@ class HeederOfDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Spacer(),
+        Expanded(child: SizedBox(height: 25)),
         InActiveDrawerItem(
           drawerItemModel: DrawerItemModel(
             title: 'Setting system',
@@ -24,7 +24,7 @@ class HeederOfDrawer extends StatelessWidget {
             image: AssetsManager.imagesLogout,
           ),
         ),
-        SizedBox(height: 38),
+        SizedBox(height: 30),
       ],
     );
   }

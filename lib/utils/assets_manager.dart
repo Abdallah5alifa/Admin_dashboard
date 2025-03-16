@@ -2,6 +2,8 @@
 class AssetsManager {
   AssetsManager._();
   
+  static const String imagesArrowDown = "assets/images/arrow-down.svg";
+
   static const String imagesAvatar1 = "assets/images/avatar1.svg";
 
   static const String imagesAvatar2 = "assets/images/avatar2.svg";

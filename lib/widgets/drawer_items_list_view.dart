@@ -31,9 +31,8 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: NeverScrollableScrollPhysics(),
+    return SliverList.builder(
+      
       itemCount: drawerItems.length,
       itemBuilder: (context, index) {
         return InkWell(
@@ -41,7 +40,6 @@ class _DrawerItemsListViewState extends State<DrawerItemsListView> {
             if (selectedIndex != index) {
               setState(() {
                 selectedIndex = index;
-                print(selectedIndex);
               });
             }
           },

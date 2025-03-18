@@ -3,14 +3,14 @@ import 'package:admin_dashboard/utils/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class DropdownExample extends StatefulWidget {
-  const DropdownExample({super.key});
+class Dropdown extends StatefulWidget {
+  const Dropdown({super.key});
 
   @override
-  _DropdownExampleState createState() => _DropdownExampleState();
+  _DropdownState createState() => _DropdownState();
 }
 
-class _DropdownExampleState extends State<DropdownExample> {
+class _DropdownState extends State<Dropdown> {
   String? selectedValue; // القيمة المختارة
   List<String> items = ["Opt 1", "Opt 2", "Opt 3", "Opt 4"];
 

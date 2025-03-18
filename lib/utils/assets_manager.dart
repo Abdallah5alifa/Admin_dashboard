@@ -12,6 +12,8 @@ class AssetsManager {
 
   static const String imagesBalance = "assets/images/balance.svg";
 
+  static const String imagesCard = "assets/images/card.png";
+
   static const String imagesCardShape = "assets/images/card_shape.svg";
 
   static const String imagesDashboard = "assets/images/dashboard.svg";

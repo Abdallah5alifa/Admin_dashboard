@@ -11,7 +11,7 @@ class AllExpensessHeader extends StatelessWidget {
       children: [
         Text('All Expensess', style: AppStyles.semiBold20),
         Expanded(child: SizedBox()),
-        DropdownExample()
+        Dropdown()
       ],
     );
   }

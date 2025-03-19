@@ -1,7 +1,10 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/widgets/custom_container.dart';
 import 'package:admin_dashboard/widgets/custom_dot_indecator.dart';
+import 'package:admin_dashboard/widgets/income_section.dart';
 import 'package:admin_dashboard/widgets/my_card_pageview.dart';
+import 'package:admin_dashboard/widgets/transction_history.dart';
+import 'package:admin_dashboard/widgets/transction_history_listview.dart';
 import 'package:flutter/material.dart';
 
 class MyCardSection extends StatelessWidget {
@@ -11,16 +14,28 @@ class MyCardSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 16,
-        children: [
-          Text('My Card', style: AppStyles.semiBold20),
-          MyCardPageview(controller: controller),
-          CustomDotIndecator(controller: controller),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(height: 40),
+        CustomContainer(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 20,
+            children: [
+              Text('My Card', style: AppStyles.semiBold20),
+              MyCardPageview(controller: controller),
+              CustomDotIndecator(controller: controller),
+              Divider(height: 30, color: Color(0xFFF1F1F1)),
+              TransctionHistory(),
+              TransctionHistoryListview(),
+            ],
+          ),
+        ),
+        SizedBox(height: 16),
+        Expanded(child: IncomeSection()),
+      ],
     );
   }
 }
+
+

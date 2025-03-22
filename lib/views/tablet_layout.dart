@@ -1,3 +1,5 @@
+import 'package:admin_dashboard/views/mobile_layout.dart';
+import 'package:admin_dashboard/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -5,6 +7,18 @@ class TabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Row(
+      spacing: 24,
+      children: [
+        Expanded(child: CustomDrawer()),
+        Expanded(
+          flex: 3,
+          child: Padding(
+            padding: EdgeInsets.only(top: 40.0),
+            child: MobileLayout(),
+          )),
+          SizedBox()
+      ],
+    );
   }
 }

@@ -7,11 +7,12 @@ class AllExpensessItemListView extends StatefulWidget {
   const AllExpensessItemListView({super.key});
 
   @override
-  State<AllExpensessItemListView> createState() => _AllExpensessItemListViewState();
+  State<AllExpensessItemListView> createState() =>
+      _AllExpensessItemListViewState();
 }
 
 class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
-   final List<AllExpensessItemModel> allExpensessItems = [
+  final List<AllExpensessItemModel> allExpensessItems = [
     AllExpensessItemModel(
       image: AssetsManager.imagesBalance,
       title: 'Balance',
@@ -36,34 +37,64 @@ class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children:
-          allExpensessItems.asMap().entries.map((entry) {
-            int index = entry.key;
-            var item = entry.value;
-            return Expanded(
-              child:
-                  (index == 0 || index == allExpensessItems.length - 1)
-                      ? InkWell(
-                        onTap: () {
-                          updateIndex(index);
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(0),
-                          child: AllExpensessItem(itemModel: item, isActive: selectedIndex == index,),
-                        ),
-                      )
-                      : InkWell(
-                        onTap: () {
-                          updateIndex(index);
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: AllExpensessItem(itemModel: item, isActive: selectedIndex == index,),
-                        ),
-                      ),
-            );
-          }).toList(),
+      spacing: 8,
+      children: [
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              updateIndex(0);
+            },
+            child: AllExpensessItem(
+              itemModel: allExpensessItems[0],
+              isActive: selectedIndex == 0,
+            ),
+          ),
+        ),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensessItem(
+              itemModel: allExpensessItems[1],
+              isActive: selectedIndex == 1,
+            ),
+          ),
+        ),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensessItem(
+              itemModel: allExpensessItems[2],
+              isActive: selectedIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
+    // return Row(
+    //   children:
+    //       allExpensessItems.asMap().entries.map((entry) {
+    //         int index = entry.key;
+    //         var item = entry.value;
+    //         return Expanded(
+    //           child: InkWell(
+    //             onTap: () {
+    //               updateIndex(index);
+    //             },
+    //             child: Padding(
+    //               padding: EdgeInsets.symmetric(horizontal: index == 1 ? 8 : 0),
+    //               child: AllExpensessItem(
+    //                 itemModel: item,
+    //                 isActive: selectedIndex == index,
+    //               ),
+    //             ),
+    //           ),
+    //         );
+    //       }).toList(),
+    // );
   }
 
   void updateIndex(int index) {

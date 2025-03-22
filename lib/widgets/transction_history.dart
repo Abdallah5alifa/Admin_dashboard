@@ -12,12 +12,12 @@ class TransctionHistory extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text('Transction History', style: AppStyles.semiBold20),
+            Text('Transction History', style: AppStyles.semiBold20(context)),
             Spacer(),
-            Text('See All', style: AppStyles.mediam16.copyWith(color: Color(0xFF4EB7F2)),),
+            Text('See All', style: AppStyles.mediam16(context).copyWith(color: Color(0xFF4EB7F2)),),
           ],
         ),
-        Text('13 Apr 2025', style: AppStyles.mediam16.copyWith(color: Color(0xFFAAAAAA)),)
+        Text('13 Apr 2025', style: AppStyles.mediam16(context).copyWith(color: Color(0xFFAAAAAA)),)
       ],
     );
   }

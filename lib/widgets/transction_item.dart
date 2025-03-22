@@ -13,11 +13,11 @@ class TransctionItem extends StatelessWidget {
       color: Color(0xFFFAFAFA),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: ListTile(
-        title: Text(transctionHistoryModel.title, style: AppStyles.semiBold16),
-        subtitle: Text(transctionHistoryModel.date, style: AppStyles.regular16.copyWith(color: Color(0xFFAAAAAA))),
+        title: Text(transctionHistoryModel.title, style: AppStyles.semiBold16(context)),
+        subtitle: Text(transctionHistoryModel.date, style: AppStyles.regular16(context).copyWith(color: Color(0xFFAAAAAA))),
         trailing: Text(
           transctionHistoryModel.amount,
-          style: AppStyles.semiBold20.copyWith(
+          style: AppStyles.semiBold20(context).copyWith(
             color:
                 transctionHistoryModel.isIncome
                     ? Color(0xFFF3735E)

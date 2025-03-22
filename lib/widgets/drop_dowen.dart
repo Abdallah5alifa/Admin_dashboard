@@ -31,7 +31,7 @@ class CustomDropDownState extends State<CustomDropDown> {
           ),
           value: selectedValue,
           hint: Text("Monthly",
-          style: AppStyles.mediam16,
+          style: AppStyles.mediam16(context),
           ),
           underline: SizedBox(), // 🔹 إزالة الخط السفلي
           isDense: true, // 🔹 تقليل المساحة الداخلية

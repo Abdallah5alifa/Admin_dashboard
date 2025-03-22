@@ -11,7 +11,7 @@ class LatestTransctionSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: 16,
       children: [
-        Text('Latest Transaction', style: AppStyles.semiBold16),
+        Text('Latest Transaction', style: AppStyles.semiBold16(context)),
         LatestTransctionListView(),
       ],
     );

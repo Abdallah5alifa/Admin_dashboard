@@ -10,7 +10,7 @@ class HeaderOfQuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text('Quick Invoice', style: AppStyles.semiBold20),
+         Text('Quick Invoice', style: AppStyles.semiBold20(context)),
         const Spacer(),
         CircleAvatar(
           radius: 24,

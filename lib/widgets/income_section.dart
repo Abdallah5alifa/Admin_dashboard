@@ -2,8 +2,7 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/widgets/custom_container.dart';
 import 'package:admin_dashboard/widgets/drop_dowen.dart';
-import 'package:admin_dashboard/widgets/income_chart.dart';
-import 'package:admin_dashboard/widgets/income_details.dart';
+import 'package:admin_dashboard/widgets/income_section_body.dart';
 import 'package:flutter/material.dart';
 
 class IncomeSection extends StatelessWidget {
@@ -19,23 +18,15 @@ class IncomeSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('Income', style: AppStyles.semiBold20),
-              Expanded(child: SizedBox()),
+              Text('Income', style: AppStyles.semiBold20(context)),
+              Spacer(),
               CustomDropDown(),
             ],
           ),
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(child: IncomeChart()),
-                Expanded(child: IncomeDetails())
-              ],
-            ),
-          )
+          IncomeSectionBody()
         ],
       ),
     );
   }
 }
+

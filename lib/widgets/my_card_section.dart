@@ -22,7 +22,7 @@ class MyCardSection extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 20,
             children: [
-              Text('My Card', style: AppStyles.semiBold20),
+              Text('My Card', style: AppStyles.semiBold20(context)),
               MyCardPageview(controller: controller),
               CustomDotIndecator(controller: controller),
               Divider(height: 30, color: Color(0xFFF1F1F1)),
@@ -32,7 +32,7 @@ class MyCardSection extends StatelessWidget {
           ),
         ),
         SizedBox(height: 16),
-        Expanded(child: IncomeSection()),
+        IncomeSection(),
       ],
     );
   }

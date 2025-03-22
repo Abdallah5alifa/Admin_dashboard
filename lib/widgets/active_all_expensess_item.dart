@@ -21,7 +21,7 @@ class ActiveAllExpensessItem extends StatelessWidget {
         color: Color(0xFF4EB7F2),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          // side: BorderSide(color: Color(0xFFF1F1F1), width: 1),
+          side: BorderSide(color: Color(0xFF4EB7F2), width: 1),
         ),
       ),
       child: Column(
@@ -33,11 +33,11 @@ class ActiveAllExpensessItem extends StatelessWidget {
             imageColor: Colors.white,
           ),
           SizedBox(height: 34),
-          Text(itemModel.title,style: AppStyles.mediam16.copyWith(color: Colors.white)),
+          FittedBox(fit: BoxFit.scaleDown, child: Text(itemModel.title,style: AppStyles.mediam16(context).copyWith(color: Colors.white))),
           SizedBox(height: 8),
-          Text(itemModel.date,style: AppStyles.regular14.copyWith(color: Color(0xFFFAFAFA))),
+          FittedBox(fit: BoxFit.scaleDown, child: Text(itemModel.date,style: AppStyles.regular14(context).copyWith(color: Color(0xFFFAFAFA)))),
           SizedBox(height: 16),
-          Text(itemModel.price,style: AppStyles.semiBold24.copyWith(color: Colors.white)),
+          FittedBox(fit: BoxFit.scaleDown, child: Text(itemModel.price,style: AppStyles.semiBold24(context).copyWith(color: Colors.white))),
         ],
       ),
     );

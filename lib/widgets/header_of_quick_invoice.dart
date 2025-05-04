@@ -1,6 +1,8 @@
 
 
 import 'package:admin_dashboard/utils/app_styles.dart';
+import 'package:admin_dashboard/utils/text_manager.dart';
+import 'package:admin_dashboard/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class HeaderOfQuickInvoice extends StatelessWidget {
@@ -10,7 +12,7 @@ class HeaderOfQuickInvoice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-         Text('Quick Invoice', style: AppStyles.semiBold20(context)),
+         CustomText(text:TextManager.quickInvoice, style: AppStyles.semiBold20(context)),
         const Spacer(),
         CircleAvatar(
           radius: 24,

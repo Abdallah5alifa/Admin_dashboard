@@ -1,5 +1,7 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/utils/assets_manager.dart';
+import 'package:admin_dashboard/utils/text_manager.dart';
+import 'package:admin_dashboard/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -30,19 +32,18 @@ class CustomDropDownState extends State<CustomDropDown> {
             child: SvgPicture.asset(AssetsManager.imagesArrowDown),
           ),
           value: selectedValue,
-          hint: Text("Monthly",
-          style: AppStyles.mediam16(context),
+          hint: CustomText(
+            text: TextManager.monthly,
+            style: AppStyles.mediam16(context),
           ),
           underline: SizedBox(), // 🔹 إزالة الخط السفلي
           isDense: true, // 🔹 تقليل المساحة الداخلية
           // padding: EdgeInsets.symmetric(horizontal: 8, ),
           borderRadius: BorderRadius.circular(12),
-          items: items.map((String item) {
-            return DropdownMenuItem(
-              value: item,
-              child: Text(item),
-            );
-          }).toList(),
+          items:
+              items.map((String item) {
+                return DropdownMenuItem(value: item, child: Text(item));
+              }).toList(),
           onChanged: (String? newValue) {
             setState(() {
               selectedValue = newValue;

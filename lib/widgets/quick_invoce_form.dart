@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/utils/text_manager.dart';
 import 'package:admin_dashboard/widgets/custom_button.dart';
 import 'package:admin_dashboard/widgets/title_text_field.dart';
 import 'package:flutter/material.dart';
@@ -16,14 +17,14 @@ class QuickInvoiceForm extends StatelessWidget {
           children: [
             Expanded(
               child: TitleTextField(
-                title: 'Customer name',
-                hint: 'Type customer name',
+                title: TextManager.customerName,
+                hint: TextManager.typeCustomerName,
               ),
             ),
             Expanded(
               child: TitleTextField(
-                title: 'Customer Email',
-                hint: 'Type customer Email',
+                title: TextManager.customerEmail,
+                hint: TextManager.typeCustomerEmail,
               ),
             ),
           ],
@@ -32,22 +33,28 @@ class QuickInvoiceForm extends StatelessWidget {
           spacing: 16,
           children: [
             Expanded(
-              child: TitleTextField(title: 'Item name', hint: 'Type Item name'),
+              child: TitleTextField(
+                title: TextManager.itemName,
+                hint: TextManager.typeItemName,
+              ),
             ),
-            Expanded(child: TitleTextField(title: 'Item mount', hint: 'USD')),
+            Expanded(
+              child: TitleTextField(title: TextManager.itemAmount, hint: 'USD'),
+            ),
           ],
         ),
         Row(
           spacing: 16,
           children: [
-            Expanded(child: CustomButton(
-              title: 'Add more details',
-              light: true,
-            )),
-            Expanded(child: CustomButton(
-              title: 'Send Money',
-              light: false,
-            )),
+            Expanded(
+              child: CustomButton(
+                title: TextManager.addMoreDetails,
+                light: true,
+              ),
+            ),
+            Expanded(
+              child: CustomButton(title: TextManager.sendMoney, light: false),
+            ),
           ],
         ),
       ],

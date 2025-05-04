@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -16,7 +17,7 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(12)),
           borderSide: BorderSide.none,
         ),
-        hintText: hint,
+        hintText: hint.tr(),
         hintStyle: AppStyles.semiBold16(context).copyWith(color: Color(0xFFAAAAAA)),
       ),
     );

@@ -1,8 +1,9 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
+import 'package:admin_dashboard/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key,  required this.light, required this.title});
+  const CustomButton({super.key, required this.light, required this.title});
   final String title;
   final bool light;
 
@@ -13,15 +14,18 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 0,
-          backgroundColor:light ? Colors.transparent: Color(0xFF4DB7F2),
+          backgroundColor: light ? Colors.transparent : Color(0xFF4DB7F2),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
         ),
         onPressed: () {},
-        child: Text(title, style: AppStyles.semiBold18(context).copyWith(
-          color: light ? Color(0xFF4DB7F2): Colors.white
-        )),
+        child: CustomText(
+          text: title,
+          style: AppStyles.semiBold18(
+            context,
+          ).copyWith(color: light ? Color(0xFF4DB7F2) : Colors.white),
+        ),
       ),
     );
   }

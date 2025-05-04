@@ -3,6 +3,7 @@
 import 'package:admin_dashboard/models/all_expensess_item_model.dart';
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:admin_dashboard/widgets/all_expensess_item_header.dart';
+import 'package:admin_dashboard/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class ActiveAllExpensessItem extends StatelessWidget {
@@ -33,11 +34,11 @@ class ActiveAllExpensessItem extends StatelessWidget {
             imageColor: Colors.white,
           ),
           SizedBox(height: 34),
-          FittedBox(fit: BoxFit.scaleDown, child: Text(itemModel.title,style: AppStyles.mediam16(context).copyWith(color: Colors.white))),
+          FittedBox(fit: BoxFit.scaleDown, child: CustomText(text:  itemModel.title,style: AppStyles.mediam16(context).copyWith(color: Colors.white))),
           SizedBox(height: 8),
-          FittedBox(fit: BoxFit.scaleDown, child: Text(itemModel.date,style: AppStyles.regular14(context).copyWith(color: Color(0xFFFAFAFA)))),
+          FittedBox(fit: BoxFit.scaleDown, child: CustomText(text:itemModel.date,style: AppStyles.regular14(context).copyWith(color: Color(0xFFFAFAFA)))),
           SizedBox(height: 16),
-          FittedBox(fit: BoxFit.scaleDown, child: Text(itemModel.price,style: AppStyles.semiBold24(context).copyWith(color: Colors.white))),
+          FittedBox(fit: BoxFit.scaleDown, child: CustomText(text:itemModel.price,style: AppStyles.semiBold24(context).copyWith(color: Colors.white))),
         ],
       ),
     );

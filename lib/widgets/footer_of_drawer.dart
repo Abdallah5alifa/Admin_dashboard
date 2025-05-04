@@ -1,11 +1,12 @@
 
 import 'package:admin_dashboard/models/drawer_item_model.dart';
 import 'package:admin_dashboard/utils/assets_manager.dart';
+import 'package:admin_dashboard/utils/text_manager.dart';
 import 'package:admin_dashboard/widgets/active_and_in_active.dart';
 import 'package:flutter/material.dart';
 
-class HeederOfDrawer extends StatelessWidget {
-  const HeederOfDrawer({super.key});
+class FooterOfDrawer extends StatelessWidget {
+  const FooterOfDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +15,13 @@ class HeederOfDrawer extends StatelessWidget {
         Expanded(child: SizedBox(height: 25)),
         InActiveDrawerItem(
           drawerItemModel: DrawerItemModel(
-            title: 'Setting system',
+            title: TextManager.settingSystem,
             image: AssetsManager.imagesSetting,
           ),
         ),
         InActiveDrawerItem(
           drawerItemModel: DrawerItemModel(
-            title: 'Logout account',
+            title: TextManager.logoutAccount,
             image: AssetsManager.imagesLogout,
           ),
         ),

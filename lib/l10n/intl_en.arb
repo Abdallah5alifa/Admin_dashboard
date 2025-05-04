@@ -1,0 +1,28 @@
+
+{
+    "dashboard": "Dashboard",
+    "my_transaction": "My Transaction",
+    "statistics": "Statistics",
+    "wallet_account": "Wallet Account",
+    "my_investments": "My Investments",
+    "setting_system": "Setting System",
+    "logout_account": "Logout Account",
+    "all_expenses": "All Expenses",
+    "monthly": "Monthly",
+    "balance": "Balance",
+    "income": "Income",
+    "expenses": "Expenses",
+    "quick_invoice": "Quick Invoice",
+    "latest_transaction": "Latest Transaction",
+    "customer_name": "Customer Name",
+    "customer_email": "Customer Email",
+    "item_name": "Item Name",
+    "item_amount": "Item Amount",
+    "send_money": "Send Money",
+    "transaction_history": "Transaction History",
+    "cash_withdrawal": "Cash Withdrawal",
+    "landing_page_project": "Landing Page Project",
+    "juni_mobile_app_project": "Juni Mobile App Project",
+    "income_title": "Income"
+  }
+  

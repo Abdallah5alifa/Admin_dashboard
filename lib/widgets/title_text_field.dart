@@ -1,4 +1,5 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
+import 'package:admin_dashboard/widgets/custom_text.dart';
 import 'package:admin_dashboard/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class TitleTextField extends StatelessWidget {
       spacing: 12,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: AppStyles.mediam16(context),),
+        CustomText(text:title, style: AppStyles.mediam16(context),),
         CustomTextField(
           hint: hint,
         )

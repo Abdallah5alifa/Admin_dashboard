@@ -1,14 +1,24 @@
 import 'package:admin_dashboard/views/dashboard_view.dart';
 import 'package:device_preview/device_preview.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   runApp(
-    DevicePreview(
-      enabled: true,
-      builder: (BuildContext context) {
-        return const AdminDashboard();
-      },
+    EasyLocalization(
+      supportedLocales: [Locale('en'), Locale('ar')],
+      path:
+          'assets/translations', // <-- change the path of the translation files
+      fallbackLocale: Locale('ar'),
+      startLocale: Locale('ar'),
+      child: DevicePreview(
+        enabled: true,
+        builder: (BuildContext context) {
+          return AdminDashboard();
+        },
+      ),
     ),
   );
 }
@@ -19,9 +29,12 @@ class AdminDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: DevicePreview.locale(context),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
+
       home: DashboardView(),
     );
   }

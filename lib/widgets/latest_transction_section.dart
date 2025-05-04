@@ -1,4 +1,6 @@
 import 'package:admin_dashboard/utils/app_styles.dart';
+import 'package:admin_dashboard/utils/text_manager.dart';
+import 'package:admin_dashboard/widgets/custom_text.dart';
 import 'package:admin_dashboard/widgets/latest_transaction_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +13,7 @@ class LatestTransctionSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       spacing: 16,
       children: [
-        Text('Latest Transaction', style: AppStyles.semiBold16(context)),
+        CustomText(text:TextManager.latestTransaction, style: AppStyles.semiBold16(context)),
         LatestTransctionListView(),
       ],
     );

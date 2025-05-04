@@ -1,5 +1,6 @@
 import 'package:admin_dashboard/models/all_expensess_item_model.dart';
 import 'package:admin_dashboard/utils/assets_manager.dart';
+import 'package:admin_dashboard/utils/text_manager.dart';
 import 'package:admin_dashboard/widgets/all_expensess_item.dart';
 import 'package:flutter/material.dart';
 
@@ -15,19 +16,19 @@ class _AllExpensessItemListViewState extends State<AllExpensessItemListView> {
   final List<AllExpensessItemModel> allExpensessItems = [
     AllExpensessItemModel(
       image: AssetsManager.imagesBalance,
-      title: 'Balance',
+      title: TextManager.balance,
       date: 'April 2023',
       price: r'$20,129',
     ),
     AllExpensessItemModel(
       image: AssetsManager.imagesIncome,
-      title: 'Income',
+      title: TextManager.income,
       date: 'April 2023',
       price: r'$20,129',
     ),
     AllExpensessItemModel(
       image: AssetsManager.imagesExpenses,
-      title: 'Expensess',
+      title: TextManager.expenses,
       date: 'April 2023',
       price: r'$20,129',
     ),

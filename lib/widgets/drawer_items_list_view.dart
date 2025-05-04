@@ -1,5 +1,6 @@
 import 'package:admin_dashboard/models/drawer_item_model.dart';
 import 'package:admin_dashboard/utils/assets_manager.dart';
+import 'package:admin_dashboard/utils/text_manager.dart';
 import 'package:admin_dashboard/widgets/drawer_item.dart';
 import 'package:flutter/material.dart';
 
@@ -12,18 +13,18 @@ class DrawerItemsListView extends StatefulWidget {
 
 class _DrawerItemsListViewState extends State<DrawerItemsListView> {
   final List<DrawerItemModel> drawerItems = [
-    DrawerItemModel(title: 'Dashboard', image: AssetsManager.imagesDashboard),
+    DrawerItemModel(title: TextManager.dashboard, image: AssetsManager.imagesDashboard),
     DrawerItemModel(
-      title: 'My Transactions',
+      title: TextManager.myTransaction,
       image: AssetsManager.imagesMyTransaction,
     ),
-    DrawerItemModel(title: 'Statistics', image: AssetsManager.imagesStatistics),
+    DrawerItemModel(title: TextManager.statistics, image: AssetsManager.imagesStatistics),
     DrawerItemModel(
-      title: 'Wallet Account',
+      title: TextManager.walletAccount,
       image: AssetsManager.imagesWelletAcount,
     ),
     DrawerItemModel(
-      title: 'My Investments',
+      title: TextManager.myInvestments,
       image: AssetsManager.imagesMyInvestment,
     ),
   ];
